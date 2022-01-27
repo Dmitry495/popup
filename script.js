@@ -7,7 +7,6 @@ icons.forEach(el => {
     img.style.backgroundImage = `url(${el})`;
     img.addEventListener('click', e => showPopup(`<img alt='pic' src='${el}'>`));
     document.body.append(img);
-
 });
 
 const popup = document.querySelector('.popup'),
@@ -33,7 +32,6 @@ document.addEventListener('keydown', (e) => {
     if (e.keyCode == 27) {
         popup.style.display = 'none';
     }
-
 });
 
 const showPopup = function (text) {
@@ -41,7 +39,6 @@ const showPopup = function (text) {
     popupContent.innerHTML = text;
     document.body.style.overflow = 'hide';
     body.style.background = 'grey';
-
 }
 
 popupClose.addEventListener('click', closePopUp);
